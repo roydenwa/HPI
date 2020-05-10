@@ -1,0 +1,9 @@
+15:56:18 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+
+15:56:20 Build Finished (took 1s.231ms)
+

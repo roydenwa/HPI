@@ -1,0 +1,949 @@
+11:41:36 **** Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:43:56 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:44:48 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:45:09 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:45:47 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:46:04 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:47:28 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:48:15 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:49:25 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:51:05 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+11:53:13 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:35: error: expected ';' at end of declaration
+        auto message = "tictocMsg"
+                                  ^
+                                  ;
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:53:41 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:35: error: expected ';' at end of declaration
+        auto message = "tictocMsg"
+                                  ^
+                                  ;
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(*message);
+                            ^        ~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'const char' to 'const char *' for 1st argument; remove *
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'const char' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make: *** [Makefile:2: all] Error 2
+11:53:54 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:35: error: expected ';' at end of declaration
+        auto message = "tictocMsg"
+                                  ^
+                                  ;
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(&message);
+                            ^        ~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'const char **' to 'const char *' for 1st argument; remove &
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'const char **' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:55:00 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:37: error: expected ';' at end of declaration
+        char message[] = "tictocMsg"
+                                    ^
+                                    ;
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:56:05 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:37: error: expected ';' at end of declaration
+        char message[] = "tictocMsg"
+                                    ^
+                                    ;
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(&message);
+                            ^        ~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'char (*)[10]' to 'const char *' for 1st argument; remove &
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'char (*)[10]' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:56:38 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:37: error: expected ';' at end of declaration
+        char message[] = "tictocMsg"
+                                    ^
+                                    ;
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(*message);
+                            ^        ~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'char' to 'const char *' for 1st argument; remove *
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'char' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:02:29 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:03:52 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:04:21 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:04:43 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:12:53 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:45:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:14:36 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:15:13 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:15:52 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:16:49 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:18:45 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:19:22 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:9: error: unknown type name 'string'; did you mean 'std::string'?
+        string message_name = begin + number;
+        ^~~~~~
+        std::string
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\include\c++\7.1.0\bits/stringfwd.h:74:33: note: 'std::string' declared here
+  typedef basic_string<char>    string;   
+                                ^
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::string' (aka 'basic_string<char>') to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:20:09 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:20:44 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:21:53 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:34: error: member reference base type 'const char *' is not a structure or union
+        auto message_name = begin.append(number);
+                            ~~~~~^~~~~~~
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:22:54 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:41: error: member reference base type 'const char *' is not a structure or union
+        std::string message_name = begin.append(number);
+                                   ~~~~~^~~~~~~
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(message_name);
+                            ^        ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:23:54 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(number)
+                            ^        ~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:24:38 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(number)
+                            ^        ~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:29:06 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(number);
+                            ^        ~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:30:41 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:51:29: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        cMessage *msg = new cMessage(out_string);
+                            ^        ~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::string' (aka 'basic_string<char>') to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:31:23 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:14: error: declaration of variable 'ss' with deduced type 'auto' requires an initializer
+        auto ss;
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:32:09 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:32:48 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:23:22: error: unknown class name 'cSimpleModule'; did you mean 'omnetpp::cSimpleModule'?
+class Simple: public cSimpleModule
+                     ^~~~~~~~~~~~~
+                     omnetpp::cSimpleModule
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/csimplemodule.h:62:15: note: 'omnetpp::cSimpleModule' declared here
+class SIM_API cSimpleModule : public cModule //implies noncopyable
+              ^
+Simple.cc:31:32: error: unknown type name 'cMessage'; did you mean 'omnetpp::cMessage'?
+    virtual void handleMessage(cMessage *msg) override;
+                               ^~~~~~~~
+                               omnetpp::cMessage
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/envirext.h:34:7: note: 'omnetpp::cMessage' declared here
+class cMessage;
+      ^
+Simple.cc:47:9: error: unknown type name 'cMessage'; did you mean 'omnetpp::cMessage'?
+        cMessage *msg = new cMessage(message_name);
+        ^~~~~~~~
+        omnetpp::cMessage
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/envirext.h:34:7: note: 'omnetpp::cMessage' declared here
+class cMessage;
+      ^
+Simple.cc:47:29: error: unknown type name 'cMessage'; did you mean 'omnetpp::cMessage'?
+        cMessage *msg = new cMessage(message_name);
+                            ^~~~~~~~
+                            omnetpp::cMessage
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/envirext.h:34:7: note: 'omnetpp::cMessage' declared here
+class cMessage;
+      ^
+Simple.cc:52:28: error: unknown type name 'cMessage'
+void Simple::handleMessage(cMessage *msg)
+                           ^
+5 errors generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:33:56 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:52:28: error: unknown type name 'cMessage'
+void Simple::handleMessage(cMessage *msg)
+                           ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:34:34 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:35:59 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:36:47 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:38: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        omnetpp::cMessage *msg = new omnetpp::cMessage(message_name);
+                                     ^                 ~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:38:04 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:38: error: no matching constructor for initialization of 'omnetpp::cMessage'
+        omnetpp::cMessage *msg = new omnetpp::cMessage(number);
+                                     ^                 ~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:172:5: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const omnetpp::cMessage' for 1st argument
+    cMessage(const cMessage& msg);
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cmessage.h:177:14: note: candidate constructor not viable: no known conversion from 'std::__cxx11::basic_string<char>' to 'const char *' for 1st argument
+    explicit cMessage(const char *name=nullptr, short kind=0);
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:38:40 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:48:68: error: expected '(' for function-style cast or type construction
+        omnetpp::cMessage *msg = new omnetpp::cMessage(std::string number);
+                                                       ~~~~~~~~~~~ ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:39:33 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:40:56 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:46:21: error: no viable conversion from 'std::__cxx11::string' (aka 'basic_string<char>') to 'const char *'
+        const char* number = std::to_string(counter);
+                    ^        ~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:41:55 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:42:15 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:30: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        char* message_name = "tictocMsg1000";
+                             ^
+1 warning generated.
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:44:24 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:47:15: error: no viable conversion from 'std::__cxx11::string' (aka 'basic_string<char>') to 'char *'
+        char* number = std::to_string(counter);
+              ^        ~~~~~~~~~~~~~~~~~~~~~~~
+Simple.cc:48:30: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        char* message_name = "tictocMsg1000";
+                             ^
+1 warning and 1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:45:42 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:51:30: warning: ISO C++11 does not allow conversion from string literal to 'char *' [-Wwritable-strings]
+        char* message_name = "tictocMsg1000";
+                             ^
+1 warning generated.
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:46:34 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:52:46: error: invalid operands to binary expression ('const char *' and 'char *')
+        char* message_name = "tictocMsg1000" + out_string;
+                             ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+1 error generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:47:38 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:52:45: error: invalid operands to binary expression ('const char *' and 'char *')
+        auto message_name = "tictocMsg1000" + out_string;
+                            ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:47:50 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:52:45: error: invalid operands to binary expression ('const char *' and 'char *')
+        auto message_name = "tictocMsg1000" + out_string;
+                            ~~~~~~~~~~~~~~~ ^ ~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:49:13 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple.cc:53:14: error: redefinition of 'message_name'
+        auto message_name = "tictocMsg1000";
+             ^
+Simple.cc:50:14: note: previous definition is here
+        auto message_name = "tictocMsg1000";
+             ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:49:35 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:50:06 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:52:11 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+14:35:15 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple2.cc
+Simple2.cc:44:9: error: no matching function for call to 'send'
+        send(msg, "out1");
+        ^~~~
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\x86_64-w64-mingw32\include\winsock2.h:997:34: note: candidate function not viable: requires 4 arguments, but 2 were provided
+  WINSOCK_API_LINKAGE int WSAAPI send(SOCKET s,const char *buf,int len,int flags);
+                                 ^
+Simple2.cc:46:9: error: no matching function for call to 'send'
+        send(msg, "out2");
+        ^~~~
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\x86_64-w64-mingw32\include\winsock2.h:997:34: note: candidate function not viable: requires 4 arguments, but 2 were provided
+  WINSOCK_API_LINKAGE int WSAAPI send(SOCKET s,const char *buf,int len,int flags);
+                                 ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:37:12 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:44:18: error: no member named 'send' in namespace 'omnetpp'
+        omnetpp::send(msg, "out1");
+        ~~~~~~~~~^
+Simple2.cc:46:18: error: no member named 'send' in namespace 'omnetpp'
+        omnetpp::send(msg, "out2");
+        ~~~~~~~~~^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:37:48 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:38:15: error: out-of-line definition of 'send_message' does not match any declaration in 'Simple2'
+void Simple2::send_message(char out_string[])
+              ^~~~~~~~~~~~
+Simple2.cc:44:9: error: use of undeclared identifier 'end'; did you mean 'send'?
+        end(msg, "out1");
+        ^~~
+        send
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/csimplemodule.h:227:18: note: 'send' declared here
+    virtual void send(cMessage *msg, const char *gatename, int gateindex=-1)  {return sendDelayed(msg, SIMTIME_ZERO, gatename, gateindex);}
+                 ^
+2 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:38:03 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:38:15: error: out-of-line definition of 'send_message' does not match any declaration in 'Simple2'
+void Simple2::send_message(char out_string[])
+              ^~~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:38:53 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:32:18: error: 'send_message' marked 'override' but does not override any member functions
+    virtual void send_message() override;
+                 ^
+Simple2.cc:39:15: error: out-of-line definition of 'send_message' does not match any declaration in 'Simple2'
+void Simple2::send_message(char out_string[])
+              ^~~~~~~~~~~~
+Simple2.cc:65:22: error: too many arguments to function call, expected 0, have 1
+        send_message(out_string);
+        ~~~~~~~~~~~~ ^~~~~~~~~~
+Simple2.cc:32:5: note: 'send_message' declared here
+    virtual void send_message() override;
+    ^
+3 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:39:45 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:39:15: error: out-of-line definition of 'send_message' does not match any declaration in 'Simple2'
+void Simple2::send_message(char out_string[])
+              ^~~~~~~~~~~~
+Simple2.cc:65:22: error: too many arguments to function call, expected 0, have 1
+        send_message(out_string);
+        ~~~~~~~~~~~~ ^~~~~~~~~~
+Simple2.cc:32:5: note: 'send_message' declared here
+    virtual void send_message();
+    ^
+2 errors generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make: *** [Makefile:2: all] Error 2
+14:40:42 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+14:42:41 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+14:50:41 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:82:22: error: use of undeclared identifier 'out_string'
+            snprintf(out_string, 128, "%s%d", message_name, message_counter);
+                     ^
+Simple2.cc:82:47: error: use of undeclared identifier 'message_name'
+            snprintf(out_string, 128, "%s%d", message_name, message_counter);
+                                              ^
+Simple2.cc:83:42: error: use of undeclared identifier 'out_string'
+            cMessage *msg = new cMessage(out_string);
+                                         ^
+3 errors generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:51:59 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Simple2.cc:82:47: error: use of undeclared identifier 'message_name'
+            snprintf(out_string, 128, "%s%d", message_name, message_counter);
+                                              ^
+1 error generated.
+make[1]: *** [Makefile:104: ../out/clang-release/src/Simple2.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:52:56 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:09:07 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:13:28 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:16:17 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:37:15 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:41:00 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:43:21 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+Simple.cc
+Simple2.cc
+Creating executable: ../out/clang-release/src/UB01_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:48:27 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:50:33 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:55:25 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:55:43 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:56:14 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+15:56:18 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
