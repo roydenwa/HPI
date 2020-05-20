@@ -13,26 +13,11 @@
 // along with this program.  If not, see http://www.gnu.org/licenses/.
 // 
 
-package ub02_hpi09.simulations;
-
-import ub02_hpi09.App;
-
-
-network SrcSink
+//
+// TODO generated message class
+//
+packet Packet 
 {
-    parameters:
-        int num_nodes = default(3);
-
-    submodules:
-        node[num_nodes]: App;
-        
-	connections:
-	    // circular conections:
-	    for i=0..num_nodes-2
-	    {
-	        node[i].out --> node[i+1].in; 
-	    }
-	    
-	    node[num_nodes-1].out --> node[0].in; 
-        
+    int source;
+    int destination;
 }

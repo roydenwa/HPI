@@ -16,6 +16,7 @@
 #ifndef __UB02_HPI09_APP_H_
 #define __UB02_HPI09_APP_H_
 
+#include "Packet_m.h"
 #include <omnetpp.h>
 
 using namespace omnetpp;
@@ -26,8 +27,11 @@ using namespace omnetpp;
 class App : public cSimpleModule
 {
   protected:
-    virtual void initialize();
-    virtual void handleMessage(cMessage *msg);
+    virtual void initialize() override;
+    virtual void handleMessage(cMessage *msg) override;
+
+    virtual Packet *generateMessage();
+    virtual void forwardMessage(Packet *msg);
 };
 
 #endif
