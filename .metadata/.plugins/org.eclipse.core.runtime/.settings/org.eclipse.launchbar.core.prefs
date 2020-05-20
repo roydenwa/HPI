@@ -1,7 +1,9 @@
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/arch=x86_64
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/name=Local
 LaunchTargetManager/org.eclipse.launchbar.core.launchTargetType.local,Local/os=win32
-configDescList=org.eclipse.launchbar.core.descriptorType.default\:simulations - tic_toc1,org.eclipse.launchbar.core.descriptorType.default\:simulations - multigate (1),org.eclipse.launchbar.core.descriptorType.default\:simulations - tic_toc1 (1),org.eclipse.launchbar.core.descriptorType.default\:simulations - multigate
+configDescList=org.eclipse.launchbar.core.descriptorType.default\:simulations - tic_toc1,org.eclipse.launchbar.core.descriptorType.default\:simulations - multigate (1),org.eclipse.launchbar.core.descriptorType.default\:simulations - tic_toc1 (1),org.eclipse.launchbar.core.descriptorType.default\:simulations - multigate,org.eclipse.launchbar.core.descriptorType.default\:simulations (1)
 eclipse.preferences.version=1
+org.eclipse.launchbar.core.descriptorType.default\:simulations\ -\ multigate\ (1)/activeLaunchMode=run
+org.eclipse.launchbar.core.descriptorType.default\:simulations\ -\ multigate\ (1)/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local
 org.eclipse.launchbar.core.descriptorType.default\:simulations\ -\ tic_toc1/activeLaunchMode=run
 org.eclipse.launchbar.core.descriptorType.default\:simulations\ -\ tic_toc1/activeLaunchTarget=org.eclipse.launchbar.core.launchTargetType.local\:Local

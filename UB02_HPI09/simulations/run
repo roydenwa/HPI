@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/ub02_hpi09 -n .:../src $*
+# for shared lib, use: opp_run -l ../src/ub02_hpi09 -n .:../src $*
