@@ -1,8 +1,0 @@
-[General]
-network = Tic_toc1
-
-[Config Aufgabe-1-1]
-# nothing special
-
-[Config Aufgabe-1-2]
-**.send_only_5 = true

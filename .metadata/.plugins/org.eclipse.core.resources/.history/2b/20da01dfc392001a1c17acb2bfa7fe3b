@@ -1,3 +1,0 @@
-[General]
-network = Multigate
-Multigate.tic.send_only_5 = true
