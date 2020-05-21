@@ -35,6 +35,7 @@ void App::initialize()
     send_counter_vec.setName("Send-counter-vector");
     receive_counter_vec.setName("Receive-counter-vector");
     packet_sizes.setName("Packet-sizes");
+    hop_counter.setName("Hop-counter");
 
     // to see counters during simulation
     WATCH(send_counter);
@@ -69,7 +70,7 @@ void App::handleMessage(cMessage *packet)
         // check and cast if packet belongs to class Packet (subclass of cMessage)
         Packet *ttpacket = check_and_cast<Packet *>(packet);
 
-        if (ttpacket->getDestination() == getIndex())
+        if (ttpacket->getDestination() == getIndex() && !(ttpacket->getHopCount() == 0))
         {
             // message arrived:
             bubble("ARRIVED at destination!");
@@ -77,6 +78,10 @@ void App::handleMessage(cMessage *packet)
             // add size to histogram
             int bit_length = ttpacket->getBitLength();
             packet_sizes.collect(bit_length);
+
+            // record hop_count in hist
+            int hop_count = ttpacket->getHopCount();
+            hop_counter.collect(hop_count);
 
             delete ttpacket;
         }
@@ -110,6 +115,18 @@ Packet *App::generateMessage()
 
 void App::forwardMessage(Packet *packet)
 {
+    // increment hop-count
+    packet->setHopCount(packet->getHopCount()+1);
+
     EV << "Forwarding message\n";
     send(packet, "out");
+}
+
+
+void App::finish()
+{
+    // Scalar data collected by histogram-objects has to be recorded manually
+    // to be accessed afterwards
+    packet_sizes.recordAs("Packet-sizes");
+    hop_counter.recordAs("Hop-count");
 }

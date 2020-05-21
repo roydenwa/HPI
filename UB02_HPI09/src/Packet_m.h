@@ -28,6 +28,7 @@
  * {
  *     int source;
  *     int destination;
+ *     int hopCount = 0;
  * }
  * </pre>
  */
@@ -36,6 +37,7 @@ class Packet : public ::omnetpp::cPacket
   protected:
     int source;
     int destination;
+    int hopCount;
 
   private:
     void copy(const Packet& other);
@@ -58,6 +60,8 @@ class Packet : public ::omnetpp::cPacket
     virtual void setSource(int source);
     virtual int getDestination() const;
     virtual void setDestination(int destination);
+    virtual int getHopCount() const;
+    virtual void setHopCount(int hopCount);
 };
 
 inline void doParsimPacking(omnetpp::cCommBuffer *b, const Packet& obj) {obj.parsimPack(b);}

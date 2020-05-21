@@ -1838,3 +1838,50 @@ make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
 App.cc
 Creating executable: ../out/clang-release/src/UB02_HPI09.exe
 make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+20:31:18 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+MSGC: Packet.msg
+App.cc
+Packet_m.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+20:38:51 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+20:46:57 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+20:53:39 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:73:67: error: no member named 'getHopCount' in 'omnetpp::cMessage'
+        if (ttpacket->getDestination() == getIndex() && !(packet->getHopCount() == 0))
+                                                          ~~~~~~  ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+20:54:44 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+21:49:21 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'

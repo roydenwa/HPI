@@ -34,10 +34,12 @@ private:
     cHistogram packet_sizes;
     cOutVector send_counter_vec;
     cOutVector receive_counter_vec;
+    cHistogram hop_counter;
 
 protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *packet) override;
+    virtual void finish() override;
 
     virtual Packet *generateMessage();
     virtual void forwardMessage(Packet *msg);

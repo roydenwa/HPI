@@ -183,6 +183,7 @@ Packet::Packet(const char *name, short kind) : ::omnetpp::cPacket(name,kind)
 {
     this->source = 0;
     this->destination = 0;
+    this->hopCount = 0;
 }
 
 Packet::Packet(const Packet& other) : ::omnetpp::cPacket(other)
@@ -206,6 +207,7 @@ void Packet::copy(const Packet& other)
 {
     this->source = other.source;
     this->destination = other.destination;
+    this->hopCount = other.hopCount;
 }
 
 void Packet::parsimPack(omnetpp::cCommBuffer *b) const
@@ -213,6 +215,7 @@ void Packet::parsimPack(omnetpp::cCommBuffer *b) const
     ::omnetpp::cPacket::parsimPack(b);
     doParsimPacking(b,this->source);
     doParsimPacking(b,this->destination);
+    doParsimPacking(b,this->hopCount);
 }
 
 void Packet::parsimUnpack(omnetpp::cCommBuffer *b)
@@ -220,6 +223,7 @@ void Packet::parsimUnpack(omnetpp::cCommBuffer *b)
     ::omnetpp::cPacket::parsimUnpack(b);
     doParsimUnpacking(b,this->source);
     doParsimUnpacking(b,this->destination);
+    doParsimUnpacking(b,this->hopCount);
 }
 
 int Packet::getSource() const
@@ -240,6 +244,16 @@ int Packet::getDestination() const
 void Packet::setDestination(int destination)
 {
     this->destination = destination;
+}
+
+int Packet::getHopCount() const
+{
+    return this->hopCount;
+}
+
+void Packet::setHopCount(int hopCount)
+{
+    this->hopCount = hopCount;
 }
 
 class PacketDescriptor : public omnetpp::cClassDescriptor
@@ -307,7 +321,7 @@ const char *PacketDescriptor::getProperty(const char *propertyname) const
 int PacketDescriptor::getFieldCount() const
 {
     omnetpp::cClassDescriptor *basedesc = getBaseClassDescriptor();
-    return basedesc ? 2+basedesc->getFieldCount() : 2;
+    return basedesc ? 3+basedesc->getFieldCount() : 3;
 }
 
 unsigned int PacketDescriptor::getFieldTypeFlags(int field) const
@@ -321,8 +335,9 @@ unsigned int PacketDescriptor::getFieldTypeFlags(int field) const
     static unsigned int fieldTypeFlags[] = {
         FD_ISEDITABLE,
         FD_ISEDITABLE,
+        FD_ISEDITABLE,
     };
-    return (field>=0 && field<2) ? fieldTypeFlags[field] : 0;
+    return (field>=0 && field<3) ? fieldTypeFlags[field] : 0;
 }
 
 const char *PacketDescriptor::getFieldName(int field) const
@@ -336,8 +351,9 @@ const char *PacketDescriptor::getFieldName(int field) const
     static const char *fieldNames[] = {
         "source",
         "destination",
+        "hopCount",
     };
-    return (field>=0 && field<2) ? fieldNames[field] : nullptr;
+    return (field>=0 && field<3) ? fieldNames[field] : nullptr;
 }
 
 int PacketDescriptor::findField(const char *fieldName) const
@@ -346,6 +362,7 @@ int PacketDescriptor::findField(const char *fieldName) const
     int base = basedesc ? basedesc->getFieldCount() : 0;
     if (fieldName[0]=='s' && strcmp(fieldName, "source")==0) return base+0;
     if (fieldName[0]=='d' && strcmp(fieldName, "destination")==0) return base+1;
+    if (fieldName[0]=='h' && strcmp(fieldName, "hopCount")==0) return base+2;
     return basedesc ? basedesc->findField(fieldName) : -1;
 }
 
@@ -360,8 +377,9 @@ const char *PacketDescriptor::getFieldTypeString(int field) const
     static const char *fieldTypeStrings[] = {
         "int",
         "int",
+        "int",
     };
-    return (field>=0 && field<2) ? fieldTypeStrings[field] : nullptr;
+    return (field>=0 && field<3) ? fieldTypeStrings[field] : nullptr;
 }
 
 const char **PacketDescriptor::getFieldPropertyNames(int field) const
@@ -430,6 +448,7 @@ std::string PacketDescriptor::getFieldValueAsString(void *object, int field, int
     switch (field) {
         case 0: return long2string(pp->getSource());
         case 1: return long2string(pp->getDestination());
+        case 2: return long2string(pp->getHopCount());
         default: return "";
     }
 }
@@ -446,6 +465,7 @@ bool PacketDescriptor::setFieldValueAsString(void *object, int field, int i, con
     switch (field) {
         case 0: pp->setSource(string2long(value)); return true;
         case 1: pp->setDestination(string2long(value)); return true;
+        case 2: pp->setHopCount(string2long(value)); return true;
         default: return false;
     }
 }
