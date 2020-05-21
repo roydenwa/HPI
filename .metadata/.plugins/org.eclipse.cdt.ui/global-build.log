@@ -980,3 +980,861 @@ MSGC: Packet.msg
 Packet_m.cc
 Creating executable: ../out/clang-release/src/UB02_HPI09.exe
 make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+11:55:21 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:30:11: error: use of undeclared identifier 'True'; did you mean 'true'?
+    while(True)
+          ^~~~
+          true
+App.cc:49:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(cPacket *packet)
+          ^~~~~~~~~~~~~
+App.cc:88:11: error: out-of-line definition of 'forwardMessage' does not match any declaration in 'App'
+void App::forwardMessage(cPacket *packet)
+          ^~~~~~~~~~~~~~
+3 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:56:23 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:49:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(cPacket *packet)
+          ^~~~~~~~~~~~~
+1 error generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+11:57:10 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:31:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *msg) override;
+                 ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:58:17 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:31:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+11:59:35 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:01:09 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:02:23 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:02:49 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:03:44 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:05:06 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:09:57 **** Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+12:15:49 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:31:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:20:21 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:25:20: error: unknown class name 'cSimpleModule'; did you mean 'omnetpp::cSimpleModule'?
+class App : public cSimpleModule
+                   ^~~~~~~~~~~~~
+                   omnetpp::cSimpleModule
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/csimplemodule.h:62:15: note: 'omnetpp::cSimpleModule' declared here
+class SIM_API cSimpleModule : public cModule //implies noncopyable
+              ^
+App.cc:29:32: error: unknown type name 'cPacket'; did you mean 'Packet'?
+    virtual void handleMessage(cPacket *packet) override;
+                               ^~~~~~~
+                               Packet
+./Packet_m.h:34:7: note: 'Packet' declared here
+class Packet : public ::omnetpp::cPacket
+      ^
+App.cc:29:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+App.cc:61:25: error: unknown type name 'cPacket'
+void App::handleMessage(cPacket *packet)
+                        ^
+App.cc:63:24: error: no template named 'check_and_cast'; did you mean 'omnetpp::check_and_cast'?
+    Packet *ttpacket = check_and_cast<Packet *>(packet);
+                       ^~~~~~~~~~~~~~
+                       omnetpp::check_and_cast
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/checkandcast.h:61:3: note: 'omnetpp::check_and_cast' declared here
+P check_and_cast(T *p)
+  ^
+App.cc:63:24: error: no template named 'check_and_cast'; did you mean 'omnetpp::check_and_cast'?
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+    Packet *ttpacket = check_and_cast<Packet *>(packet);
+                       ^~~~~~~~~~~~~~
+                       omnetpp::check_and_cast
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/checkandcast.h:61:3: note: 'omnetpp::check_and_cast' declared here
+P check_and_cast(T *p)
+  ^
+6 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:21:14 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:32:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+1 error generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:23:11 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:32:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+App.cc:64:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(Packet *packet)
+          ^~~~~~~~~~~~~
+2 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:23:49 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:64:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(Packet *packet)
+          ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:25:57 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:32:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+App.cc:64:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(Packet *packet)
+          ^~~~~~~~~~~~~
+2 errors generated.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+12:26:30 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:32:18: error: 'handleMessage' marked 'override' but does not override any member functions
+    virtual void handleMessage(cPacket *packet) override;
+                 ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:26:55 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:27:55 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:29:13 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:29:34 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+12:30:52 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+12:31:04 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:22:47 **** Incremental Build of configuration release for project UB01_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB01_HPI09/src'
+14:22:49 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:22:50 **** Build of configuration debug for project tictoc_example ****
+make MODE=debug all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/tictoc_example/src'
+Creating executable: ../out/clang-debug/src/tictoc_example_dbg.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/tictoc_example/src'
+14:23:09 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:25:14 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:50:21: error: redefinition of 'packet'
+            Packet *packet = generateMessage();
+                    ^
+App.cc:46:21: note: previous definition is here
+            Packet *packet = generateMessage();
+                    ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+14:26:12 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:47:55 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:49:57 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:52:39 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+14:59:58 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:44:27: error: use of undeclared identifier 'slefmsg'; did you mean 'selfmsg'?
+    scheduleAt(simTime(), slefmsg);
+                          ^~~~~~~
+                          selfmsg
+App.cc:43:15: note: 'selfmsg' declared here
+    cMessage *selfmsg = new cMessage("Timer");
+              ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:00:21 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:01:06 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:09:27 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:11:32 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:15:26 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:17:46 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:18:24 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:21:04 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:29:28 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:31:29 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:74:17: error: cannot initialize a variable of type 'Packet *' with an rvalue of type 'omnetpp::cMessage *'
+        Packet *ttpacket = check_and_cast<cMessage *>(packet);
+                ^          ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:32:02 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:76:23: error: no member named 'getDestination' in 'omnetpp::cMessage'
+        if (ttpacket->getDestination() == getIndex())
+            ~~~~~~~~  ^
+App.cc:85:28: error: cannot initialize a parameter of type 'Packet *' with an lvalue of type 'omnetpp::cMessage *'
+            forwardMessage(ttpacket);
+                           ^~~~~~~~
+./App.h:34:41: note: passing argument to parameter 'msg' here
+    virtual void forwardMessage(Packet *msg);
+                                        ^
+2 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:34:18 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:36:28 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:74:53: error: no matching conversion for C-style cast from 'omnetpp::cMessage *' to 'Packet'
+        Packet *ttpacket = check_and_cast<Packet *>((Packet)packet);
+                                                    ^~~~~~~~~~~~~~
+./Packet_m.h:48:5: note: candidate constructor not viable: no known conversion from 'omnetpp::cMessage *' to 'const char *' for 1st argument
+    Packet(const char *name=nullptr, short kind=0);
+    ^
+./Packet_m.h:49:5: note: candidate constructor not viable: no known conversion from 'omnetpp::cMessage *' to 'const Packet' for 1st argument
+    Packet(const Packet& other);
+    ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:42:25 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:59:11: error: out-of-line definition of 'handleMessage' does not match any declaration in 'App'
+void App::handleMessage(Packet *packet)
+          ^~~~~~~~~~~~~
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:42:55 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:45:15 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:45:51 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:78:13: error: use of undeclared identifier 'ttpacket'; did you mean 'packet'?
+        if (ttpacket->getDestination() == getIndex())
+            ^~~~~~~~
+            packet
+App.cc:59:35: note: 'packet' declared here
+void App::handleMessage(cMessage *packet)
+                                  ^
+App.cc:78:23: error: no member named 'getDestination' in 'omnetpp::cMessage'
+        if (ttpacket->getDestination() == getIndex())
+            ~~~~~~~~  ^
+App.cc:82:20: error: use of undeclared identifier 'ttpacket'; did you mean 'packet'?
+            delete ttpacket;
+                   ^~~~~~~~
+                   packet
+App.cc:59:35: note: 'packet' declared here
+void App::handleMessage(cMessage *packet)
+                                  ^
+App.cc:87:28: error: use of undeclared identifier 'ttpacket'
+            forwardMessage(ttpacket);
+                           ^
+4 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:46:25 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:78:21: error: no member named 'getDestination' in 'omnetpp::cMessage'
+        if (packet->getDestination() == getIndex())
+            ~~~~~~  ^
+App.cc:87:28: error: cannot initialize a parameter of type 'Packet *' with an lvalue of type 'omnetpp::cMessage *'
+            forwardMessage(packet);
+                           ^~~~~~
+./App.h:34:41: note: passing argument to parameter 'msg' here
+    virtual void forwardMessage(Packet *msg);
+                                        ^
+2 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:47:34 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:78:21: error: no member named 'getDestination' in 'omnetpp::cMessage'
+        if (packet->getDestination() == getIndex())
+            ~~~~~~  ^
+App.cc:87:28: error: cannot initialize a parameter of type 'Packet *' with an lvalue of type 'omnetpp::cMessage *'
+            forwardMessage(packet);
+                           ^~~~~~
+./App.h:34:41: note: passing argument to parameter 'msg' here
+    virtual void forwardMessage(Packet *msg);
+                                        ^
+App.cc:115:11: error: out-of-line definition of 'forwardMessage' does not match any declaration in 'App'
+void App::forwardMessage(cMessage *packet)
+          ^~~~~~~~~~~~~~
+3 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:49:53 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+15:57:14 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+15:57:29 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:10:11 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:12:08 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+16:12:19 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:14:30 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+16:14:41 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:16:40 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:23:48 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:28:42 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:31:00 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:43:10 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+16:46:22 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+17:37:43 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:32:5: warning: 'cLongHistogram' is deprecated [-Wdeprecated-declarations]
+    cLongHistogram packet_sizes;
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/clegacyhistogram.h:355:7: note: 'cLongHistogram' has been explicitly marked deprecated here
+class _OPPDEPRECATED SIM_API cLongHistogram : public cLegacyHistogram
+      ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/platdep/platdefs.h:58:39: note: expanded from macro '_OPPDEPRECATED'
+#  define _OPPDEPRECATED __attribute((__deprecated__))
+                                      ^
+App.cc:73:33: error: too many arguments to function call, expected 0, have 1
+            packet_sizes.record(bit_length);
+            ~~~~~~~~~~~~~~~~~~~ ^~~~~~~~~~
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/cstatistic.h:238:5: note: 'record' declared here
+    virtual void record()  {recordAs(nullptr, nullptr);}
+    ^
+1 warning and 1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+17:41:41 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:32:5: warning: 'cLongHistogram' is deprecated [-Wdeprecated-declarations]
+    cLongHistogram packet_sizes;
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/clegacyhistogram.h:355:7: note: 'cLongHistogram' has been explicitly marked deprecated here
+class _OPPDEPRECATED SIM_API cLongHistogram : public cLegacyHistogram
+      ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/platdep/platdefs.h:58:39: note: expanded from macro '_OPPDEPRECATED'
+#  define _OPPDEPRECATED __attribute((__deprecated__))
+                                      ^
+1 warning generated.
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+17:48:54 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+17:52:04 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+17:55:28 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+18:18:59 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:54:26: error: no member named 'collect' in 'omnetpp::cOutVector'
+        send_counter_vec.collect(send_counter);
+        ~~~~~~~~~~~~~~~~ ^
+App.cc:63:29: error: no member named 'collect' in 'omnetpp::cOutVector'
+        receive_counter_vec.collect(receive_counter);
+        ~~~~~~~~~~~~~~~~~~~ ^
+2 errors generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+18:20:30 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+18:21:01 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+18:41:48 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+18:44:09 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+App.cc:54:26: error: no matching member function for call to 'recordWithTimestamp'
+        send_counter_vec.recordWithTimestamp((double)send_counter);
+        ~~~~~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/coutvector.h:194:18: note: candidate function not viable: requires 2 arguments, but 1 was provided
+    virtual bool recordWithTimestamp(simtime_t t, double value);
+                 ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/coutvector.h:199:18: note: candidate function not viable: requires 2 arguments, but 1 was provided
+    virtual bool recordWithTimestamp(simtime_t t, SimTime value) {return recordWithTimestamp(t, value.dbl());}
+                 ^
+1 error generated.
+make[1]: *** [Makefile:105: ../out/clang-release/src/App.o] Error 1
+make: *** [Makefile:2: all] Error 2
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+18:45:26 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+19:22:12 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+19:28:19 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make[1]: Nothing to be done for 'all'.
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+19:36:49 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:34:5: warning: 'cLongHistogram' is deprecated [-Wdeprecated-declarations]
+    cLongHistogram packet_sizes;
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/clegacyhistogram.h:355:7: note: 'cLongHistogram' has been explicitly marked deprecated here
+class _OPPDEPRECATED SIM_API cLongHistogram : public cLegacyHistogram
+      ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/platdep/platdefs.h:58:39: note: expanded from macro '_OPPDEPRECATED'
+#  define _OPPDEPRECATED __attribute((__deprecated__))
+                                      ^
+1 warning generated.
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+19:39:27 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+In file included from App.cc:22:
+./App.h:34:5: warning: 'cLongHistogram' is deprecated [-Wdeprecated-declarations]
+    cLongHistogram packet_sizes;
+    ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/clegacyhistogram.h:355:7: note: 'cLongHistogram' has been explicitly marked deprecated here
+class _OPPDEPRECATED SIM_API cLongHistogram : public cLegacyHistogram
+      ^
+C:/Users/I523523/Downloads/omnetpp-5.4.1-src-windows/omnetpp-5.4.1/include/omnetpp/platdep/platdefs.h:58:39: note: expanded from macro '_OPPDEPRECATED'
+#  define _OPPDEPRECATED __attribute((__deprecated__))
+                                      ^
+1 warning generated.
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+19:41:13 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'

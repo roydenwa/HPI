@@ -2,8 +2,10 @@
 <section name="Workbench">
 	<section name="TemplateBasedWizard">
 		<item value="bundleentry://359.fwk1751500625/templates/emptynedfile/" key="nedfile.template"/>
+		<item value="bundleentry://359.fwk1751500625/templates/emptynetwork/" key="network.template"/>
 		<item value="bundleentry://359.fwk1751500625/templates/emptysimplemodule/" key="simplemodule.template"/>
 		<item value="bundleentry://353.fwk1751500625/templates/inifile/" key="inifile.template"/>
 		<item value="bundleentry://345.fwk1751500625/template/emptylargeproject/" key="project.template"/>
+		<item value="bundleentry://357.fwk1751500625/templates/msgfile/" key="msgfile.template"/>
 	</section>
 </section>

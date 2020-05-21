@@ -1,0 +1,28 @@
+file 2670978 1590083341                                         
+version 2
+run Aufgabe-1-4-0-20200521-19:41:21-4392
+attr configname Aufgabe-1-4
+attr datetime 20200521-19:41:21
+attr experiment Aufgabe-1-4
+attr inifile omnetpp.ini
+attr iterationvars ""
+attr iterationvarsf ""
+attr measurement ""
+attr network SrcSink
+attr processid 4392
+attr repetition 0
+attr replication #0
+attr resultdir results
+attr runnumber 0
+attr seedset 0
+param SrcSink.num_nodes 2
+
+vector 0 SrcSink.node[0] "Send counter vector" ETV
+vector 1 SrcSink.node[1] "Send counter vector" ETV
+vector 2 SrcSink.node[1] "Receive counter vector" ETV
+vector 3 SrcSink.node[0] "Receive counter vector" ETV
+0	622 529352 1 91200 0 0.099998139614 18157 1 18157 164847403 1995477813315
+1	529974 534750 2 91197 0 0.099995960057 18336 1 18336 168113616 2055076879856
+2	1064724 801400 3 91201 0 0.099998139614 27296 1 27296 372549456 6779530817136
+3	1866124 804852 4 91202 0 0.099998139614 27413 1 27413 375749991 6867081585519
+

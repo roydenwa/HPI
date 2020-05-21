@@ -26,9 +26,18 @@ using namespace omnetpp;
  */
 class App : public cSimpleModule
 {
-  protected:
+private:
+    int send_counter;
+    int receive_counter;
+
+    // for statistics
+    cHistogram packet_sizes;
+    cOutVector send_counter_vec;
+    cOutVector receive_counter_vec;
+
+protected:
     virtual void initialize() override;
-    virtual void handleMessage(cMessage *msg) override;
+    virtual void handleMessage(cMessage *packet) override;
 
     virtual Packet *generateMessage();
     virtual void forwardMessage(Packet *msg);
