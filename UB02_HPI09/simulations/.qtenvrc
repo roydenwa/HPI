@@ -13,11 +13,3 @@ fast-min-playback-speed=1
 fast-max-playback-speed=1e+6
 fast-min-animation-speed=nan
 fast-max-animation-speed=nan
-
-[Inspector-0]
-object=SrcSink.node[0]
-classname=App
-id=@Variant(\0\0\0\x81\0\0\0\0\0\0\0\x2)
-type=1
-geom=@Rect(1053 246 698 300)
-fullscreen=false

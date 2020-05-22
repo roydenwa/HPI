@@ -1,14 +1,14 @@
 version 2
-run Aufgabe-2-0-20200522-10:14:01-5904
+run Aufgabe-2-0-20200522-10:29:35-2152
 attr configname Aufgabe-2
-attr datetime 20200522-10:14:01
+attr datetime 20200522-10:29:35
 attr experiment Aufgabe-2
 attr inifile omnetpp.ini
 attr iterationvars ""
 attr iterationvarsf ""
 attr measurement ""
 attr network SrcSink
-attr processid 5904
+attr processid 2152
 attr repetition 0
 attr replication #0
 attr resultdir results

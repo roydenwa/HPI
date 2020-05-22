@@ -31,6 +31,7 @@ void App::initialize()
 {
     send_counter = 0;
     receive_counter = 0;
+    par("nodeID") = getIndex();
 
     send_counter_vec.setName("Send-counter-vector");
     receive_counter_vec.setName("Receive-counter-vector");
@@ -98,7 +99,7 @@ void App::handleMessage(cMessage *packet)
 Packet *App::generateMessage()
 {
     // produce source and destination addresses
-    int src = getIndex();  // our module index
+    int src = par("nodeID");  // our module index
     int n = getVectorSize();  // module vector size
 
     // choose destination and bit length randomly

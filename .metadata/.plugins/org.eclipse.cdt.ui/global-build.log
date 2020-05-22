@@ -1892,3 +1892,28 @@ make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
 App.cc
 Creating executable: ../out/clang-release/src/UB02_HPI09.exe
 make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+10:25:22 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+10:28:04 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+C:\Users\I523523\Downloads\omnetpp-5.4.1-src-windows\omnetpp-5.4.1\tools\win64\mingw64\bin\ld: cannot open output file ../out/clang-release/src/UB02_HPI09.exe: Permission denied
+clang++.exe: error: unable to remove file: Permission denied
+clang++.exe: error: linker command failed with exit code 1 (use -v to see invocation)
+make[1]: *** [Makefile:96: ../out/clang-release/src/UB02_HPI09.exe] Error 1
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+make: *** [Makefile:2: all] Error 2
+10:28:17 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
