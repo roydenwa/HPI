@@ -1885,3 +1885,10 @@ cd src && /usr/bin/make
 make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
 make[1]: Nothing to be done for 'all'.
 make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+10:11:47 **** Incremental Build of configuration release for project UB02_HPI09 ****
+make MODE=release all 
+cd src && /usr/bin/make
+make[1]: Entering directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'
+App.cc
+Creating executable: ../out/clang-release/src/UB02_HPI09.exe
+make[1]: Leaving directory '/c/Users/I523523/code/uni/HPI/UB02_HPI09/src'

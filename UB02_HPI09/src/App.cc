@@ -53,7 +53,9 @@ void App::handleMessage(cMessage *packet)
     {
         // send actual msg (triggered by selfmsg)
         Packet *newpacket = generateMessage();
-        send(newpacket, "out");
+
+        // use forwardMessage to update hopCount immediately
+        forwardMessage(newpacket);
 
         send_counter++;
         send_counter_vec.recordWithTimestamp(simTime(), (double)send_counter);
@@ -70,7 +72,7 @@ void App::handleMessage(cMessage *packet)
         // check and cast if packet belongs to class Packet (subclass of cMessage)
         Packet *ttpacket = check_and_cast<Packet *>(packet);
 
-        if (ttpacket->getDestination() == getIndex() && !(ttpacket->getHopCount() == 0))
+        if (ttpacket->getDestination() == getIndex())
         {
             // message arrived:
             bubble("ARRIVED at destination!");
