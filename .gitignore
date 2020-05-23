@@ -1,1 +1,7 @@
 .metadata/
+
+# compressed files to hand in:
+*.zip
+
+# pdfs to hand in:
+*.pdf
