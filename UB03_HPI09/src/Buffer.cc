@@ -24,8 +24,5 @@ void Buffer::initialize()
 
 void Buffer::handleMessage(cMessage *msg)
 {
-    if (par("buffer_size") != 0)
-    {
 
-    }
 }
