@@ -21,15 +21,20 @@ import ub03_hpi09.Buffer;
 
 module Node
 {
+    @display("bgb=263,209");
     gates:
         inout line;
-       
-    submodules:
-        app: App;
-        buffer: Buffer;
 
-	connections:
-	    app.in <-- buffer.out;
-	    app.out --> buffer.in;
-	    buffer.line <--> line;      
+    submodules:
+        app: App {
+            @display("p=35,135");
+        }
+        buffer: Buffer {
+
+            @display("p=124,40");
+        }
+    connections:
+        app.in <-- buffer.out;
+        app.out --> buffer.in;
+        buffer.line <--> line;
 }
