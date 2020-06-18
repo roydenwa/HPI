@@ -16,10 +16,11 @@
 package ub04_hpi09;
 
 module Crossbar
-{
+{       
     parameters:
-        int num_inports = getAncestorPar("num_nodes");
-        
+        // will be set by parent network
+        int num_inports = default(0);
+ 
 	gates:
 	    inout inport[num_inports];
 	    inout outport[num_inports];

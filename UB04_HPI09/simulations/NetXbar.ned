@@ -24,6 +24,9 @@ network NetXbar
    	parameters:
         int num_nodes = default(4);
         
+        // set param of child ned 
+        xbar.num_inports = default(num_nodes);
+        
     types:
         channel C extends ned.DatarateChannel
         {
