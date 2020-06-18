@@ -25,9 +25,26 @@ using namespace omnetpp;
  */
 class Buffer : public cSimpleModule
 {
-  protected:
-    virtual void initialize();
-    virtual void handleMessage(cMessage *msg);
+private:
+    // for statistics
+    int num_pkgs_dropped;
+    cMessage *selfMessage;
+    cOutVector time_in_buffer;
+    cOutVector pkgs_dropped_vec;
+    cOutVector pkgs_saved_vec;
+    cQueue *queue;
+
+    // to get info if channel behind "line" is busy
+    cChannel *txChannel;
+
+protected:
+    virtual void initialize() override;
+    virtual void handleMessage(cMessage *msg) override;
+    //virtual void finish() override;
+
+    // custom destructor
+    virtual ~Buffer() override;
 };
 
 #endif
+

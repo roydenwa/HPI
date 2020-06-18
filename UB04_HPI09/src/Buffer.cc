@@ -17,12 +17,98 @@
 
 Define_Module(Buffer);
 
+
 void Buffer::initialize()
 {
-    // TODO - Generated method body
+    // init statistics
+    num_pkgs_dropped = 0;
+    pkgs_saved_vec.setName("Pkgs-saved");
+    pkgs_dropped_vec.setName("Pkgs-dropped");
+    time_in_buffer.setName("Time-in-buffer");
+
+    queue = new cQueue("Bufferqueue");
+    selfMessage = new cMessage();
+    txChannel = gate("line$o")->getTransmissionChannel();
 }
+
 
 void Buffer::handleMessage(cMessage *msg)
 {
-    // TODO - Generated method body
+    // use slfmsgs to check queue
+    if (msg->isSelfMessage())
+    {
+
+        simtime_t txFinishTime = txChannel->getTransmissionFinishTime();
+
+        if (txFinishTime <= simTime())
+        {
+            auto *sendMsg = (cMessage*) queue->pop();
+            auto buffer_time = simTime() - sendMsg->getArrivalTime();
+
+            time_in_buffer.record(buffer_time);
+            send(sendMsg, "line$o");
+
+            if (!queue->isEmpty())
+            {
+                scheduleAt(txFinishTime, msg);
+            }
+        }
+        else
+        {
+            scheduleAt(txFinishTime, msg);
+        }
+
+    }
+    else
+    {
+        if (msg->arrivedOn("in"))
+        {
+
+            simtime_t txFinishTime = txChannel->getTransmissionFinishTime();
+
+            if (txFinishTime <= simTime() && queue->isEmpty())
+            {
+                auto buffer_time = simTime() - msg->getArrivalTime();
+                time_in_buffer.record(buffer_time);
+                send(msg, "line$o");
+            }
+            else
+            {
+                if (queue->getLength() < (int) par("buffer_size") || (int) par("buffer_size") == 0)
+                {
+
+                    if (queue->isEmpty())
+                    {
+                        scheduleAt(txFinishTime, selfMessage);
+                    }
+
+                    queue->insert(msg);
+                }
+                else
+                {
+                    delete msg;
+
+                    num_pkgs_dropped++;
+                    pkgs_dropped_vec.recordWithTimestamp(simTime(), (double)num_pkgs_dropped);
+                }
+
+            }
+
+        }
+        // always pass
+        else if (msg->arrivedOn("line$i"))
+        {
+            send(msg, "out");
+        }
+
+    }
+    // get size of queue == # of stored pkgs
+    pkgs_saved_vec.recordWithTimestamp(simTime(), (double)queue->getLength());
+}
+
+
+Buffer::~Buffer()
+{
+    delete queue;
+    delete selfMessage;
 }
