@@ -111,5 +111,6 @@ void Buffer::handleMessage(cMessage *msg)
 Buffer::~Buffer()
 {
     delete queue;
+    delete selfMessage;
 }
 
