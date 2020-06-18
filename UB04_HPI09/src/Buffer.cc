@@ -14,6 +14,7 @@
 // 
 
 #include "Buffer.h"
+#include<tuple>
 
 Define_Module(Buffer);
 
@@ -112,3 +113,4 @@ Buffer::~Buffer()
     delete queue;
     delete selfMessage;
 }
+
