@@ -15,7 +15,6 @@
 
 package ub04_hpi09;
 
-
 import ub04_hpi09.App;
 import ub04_hpi09.Buffer;
 

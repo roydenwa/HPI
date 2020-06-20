@@ -15,14 +15,69 @@
 
 package ub04_hpi09;
 
+import ub04_hpi09.Buffer;
+
+
+simple Inport
+{
+    gates:
+        input in;
+        output out;
+        inout arbiterCtrl;
+}
+
+
+simple Arbiter
+{
+    gates:
+    	inout in_out;
+}
+
+
+simple Multiplexer
+{
+    gates:
+        input in[];
+        output out;
+}
+
+
+module Outport
+{
+    gates:
+        inout line;
+ 
+    submodules:
+        arbiter: Arbiter;
+        mux: Multiplexer;
+        outbuf: Buffer;
+        
+    connections:
+        line --> mux.in;
+        mux.out --> outbuf.in;  
+        outbuf.out --> line; 
+        line <--> arbiter.in_out;
+}
+
+
 module Crossbar
-{       
+{     
     parameters:
         // will be set by parent network
         int num_inports = default(0);
- 
-	gates:
-	    inout inport[num_inports];
-	    inout outport[num_inports];
+        double data_rate @unit(Gbps) = default(1Gbps);
+        
+    gates:
+        inout line;
+
+	submodules:
+	    inport[num_inports]: Inport;
+	    outport[num_inports]: Outport;
+	    
+	connections:
+	    for i=0..num_inports-1, for j=0..num_inports-1
+	    {
+	    	inport[i].out --> outport[j].line;     
+	    } 
         
 }

@@ -40,7 +40,7 @@ network NetXbar
     connections:
         for i=0..num_nodes-1
         {
-            node[i].line <--> C <--> xbar.inport[i];
+            node[i].line <--> C <--> xbar.line;
         }   
     
 }
