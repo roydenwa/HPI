@@ -28,9 +28,18 @@ class Multiplexer : public cSimpleModule
 };
 
 
+class Outbuffer : public cSimpleModule
+{
+  protected:
+    virtual void initialize() override;
+    virtual void handleMessage(cMessage *msg) override;
+};
+
+
 Define_Module(Inport);
 Define_Module(Arbiter);
 Define_Module(Multiplexer);
+Define_Module(Outbuffer);
 
 
 void Inport::initialize()
@@ -64,6 +73,18 @@ void Multiplexer::initialize()
 
 
 void Multiplexer::handleMessage(cMessage *msg)
+{
+    // TODO
+}
+
+
+void Outbuffer::initialize()
+{
+    // TODO
+}
+
+
+void Outbuffer::handleMessage(cMessage *msg)
 {
     // TODO
 }

@@ -22,7 +22,7 @@ import ub04_hpi09.Crossbar;
 network NetXbar
 {
    	parameters:
-        int num_nodes = default(4);
+        int num_nodes = 4;
         
         // set param of child ned 
         xbar.num_inports = num_nodes;
