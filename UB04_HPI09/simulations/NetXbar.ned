@@ -15,9 +15,9 @@
 
 package ub04_hpi09.simulations;
 
-
 import ub04_hpi09.Node;
 import ub04_hpi09.Crossbar;
+
 
 network NetXbar
 {
@@ -25,7 +25,7 @@ network NetXbar
         int num_nodes = default(4);
         
         // set param of child ned 
-        xbar.num_inports = default(num_nodes);
+        xbar.num_inports = num_nodes;
         
     types:
         channel C extends ned.DatarateChannel
@@ -40,7 +40,8 @@ network NetXbar
     connections:
         for i=0..num_nodes-1
         {
-            node[i].line <--> C <--> xbar.line;
+            node[i].line$o --> C --> xbar.in[i];
+            xbar.out[i] --> C --> node[i].line$i;
         }   
     
 }
