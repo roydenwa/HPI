@@ -6,6 +6,9 @@ using namespace omnetpp;
 
 class Inport : public cSimpleModule
 {
+    cOutVector qlength;
+    cOutVector qtime;
+
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
@@ -14,6 +17,9 @@ class Inport : public cSimpleModule
 
 class Arbiter : public cSimpleModule
 {
+    cOutVector outstanding_requests;
+    cOutVector service_time;
+
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
@@ -30,6 +36,9 @@ class Multiplexer : public cSimpleModule
 
 class Outbuffer : public cSimpleModule
 {
+    cOutVector qlength;
+    cOutVector qtime;
+
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
@@ -44,7 +53,8 @@ Define_Module(Outbuffer);
 
 void Inport::initialize()
 {
-    // TODO
+    qlength.setName("Qlength");
+    qtime.setName("Qtime");
 }
 
 
@@ -56,7 +66,8 @@ void Inport::handleMessage(cMessage *msg)
 
 void Arbiter::initialize()
 {
-    // TODO
+    outstanding_requests.setName("Outstanding-requests");
+    service_time.setName("Service-time");
 }
 
 
@@ -80,7 +91,8 @@ void Multiplexer::handleMessage(cMessage *msg)
 
 void Outbuffer::initialize()
 {
-    // TODO
+    qlength.setName("Qlength");
+    qtime.setName("Qtime");
 }
 
 
