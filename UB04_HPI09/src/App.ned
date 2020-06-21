@@ -22,7 +22,7 @@ simple App
 {
     parameters:
         int nodeID = default(0);
-        volatile double sendDelay = uniform(1.0, 10.0);
+        volatile double sendDelay = uniform(1.0, 2.0);
 
     gates:
         input in;
