@@ -32,12 +32,14 @@ void App::initialize()
     send_counter = 0;
     receive_counter = 0;
     par("nodeID") = getIndex();
+    recieved_bits = 0.0;
 
     send_counter_vec.setName("Send-counter-vector");
     receive_counter_vec.setName("Receive-counter-vector");
     packet_sizes.setName("Packet-sizes");
     hop_counter.setName("Hop-counter");
     end2end_delay.setName("End-to-End-Delay");
+    throughput_vec.setName("Throughput");
 
     // to see counters during simulation
     WATCH(send_counter);
@@ -90,6 +92,12 @@ void App::handleMessage(cMessage *packet)
             // record end2end delay
             auto delay = simTime() - ttpacket->getCreationTime();
             end2end_delay.record(delay);
+
+            // calc and record throughput
+            recieved_bits += (double)bit_length;
+            auto throughput = recieved_bits / simTime().dbl();
+
+            throughput_vec.recordWithTimestamp(simTime(), throughput);
 
             delete ttpacket;
         }

@@ -30,6 +30,7 @@ class App : public cSimpleModule
 private:
     int send_counter;
     int receive_counter;
+    double recieved_bits;
 
     // for statistics
     cHistogram packet_sizes;
@@ -37,6 +38,7 @@ private:
     cOutVector receive_counter_vec;
     cHistogram hop_counter;
     cOutVector end2end_delay;
+    cOutVector throughput_vec;
 
 protected:
     virtual void initialize() override;
