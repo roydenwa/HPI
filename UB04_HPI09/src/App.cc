@@ -37,6 +37,7 @@ void App::initialize()
     receive_counter_vec.setName("Receive-counter-vector");
     packet_sizes.setName("Packet-sizes");
     hop_counter.setName("Hop-counter");
+    end2end_delay.setName("End-to-End-Delay");
 
     // to see counters during simulation
     WATCH(send_counter);
@@ -85,6 +86,10 @@ void App::handleMessage(cMessage *packet)
             // record hop_count in hist
             int hop_count = ttpacket->getHopCount();
             hop_counter.collect(hop_count);
+
+            // record end2end delay
+            auto delay = simTime() - ttpacket->getCreationTime();
+            end2end_delay.record(delay);
 
             delete ttpacket;
         }

@@ -36,6 +36,7 @@ private:
     cOutVector send_counter_vec;
     cOutVector receive_counter_vec;
     cHistogram hop_counter;
+    cOutVector end2end_delay;
 
 protected:
     virtual void initialize() override;
