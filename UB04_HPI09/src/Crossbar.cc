@@ -126,11 +126,11 @@ void Inport::handleMessage(cMessage *msg)
         // send release msg to arbiter after transmission finished
         auto *release = new cMessage("RELEASE");
         release->setKind(300);
-        sendDelayed(release, txFinishTime-simTime(), "out", destination);
+        sendDelayed(release, txFinishTime-simTime(), "arbiterCtrl", destination);
 
         // also send selfmsg to check if there are more pkgs waiting in in_queue
         auto *selfmsg = new cMessage("CHECK-IN-QUEUE");
-        scheduleAt(simTime(), selfmsg);
+        scheduleAt(txFinishTime, selfmsg);
 
         delete msg;
     }
@@ -302,7 +302,30 @@ void Outbuffer::handleMessage(cMessage *msg)
         // check if queue is empty
         if (!out_queue->isEmpty())
         {
+            if (!outChannel->isBusy())
+            {
+                auto next_msg = (Packet*)out_queue->pop();
+                send(next_msg, "out");
 
+                // repeat if queue still not empty
+                if (!out_queue->isEmpty())
+                {
+                    scheduleAt(simTime(), msg);
+                }
+                else
+                {
+                    delete msg;
+                }
+            }
+            // try again when out port is not busy anymore
+            else
+            {
+                scheduleAt(outChannel->getTransmissionFinishTime(), msg);
+            }
+        }
+        else
+        {
+            delete msg;
         }
     }
     else
@@ -313,15 +336,20 @@ void Outbuffer::handleMessage(cMessage *msg)
         }
         else
         {
+            if (out_queue->getLength() < (int)par("buffer_size") || (int)par("buffer_size") == 0)
+            {
+                out_queue->insert(msg);
+                auto txFinishTime = outChannel->getTransmissionFinishTime();
 
-        }
-        if (out_queue->getLength() < (int)par("buffer_size") || (int)par("buffer_size") == 0)
-        {
-
+                auto *selfmsg = new cMessage("CHECK-OUT-QUEUE");
+                scheduleAt(txFinishTime, selfmsg);
+            }
+            else
+            {
+                delete msg;
+            }
         }
     }
-
-
 }
 
 
