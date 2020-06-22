@@ -18,6 +18,7 @@ class Inport : public cSimpleModule
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
+    virtual ~Inport() override;
 };
 
 
@@ -25,10 +26,15 @@ class Arbiter : public cSimpleModule
 {
     cOutVector outstanding_requests;
     cOutVector service_time;
+    cQueue *request_queue;
+
+    // set while transmission is granted
+    bool blocked;
 
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
+    virtual ~Arbiter() override;
 };
 
 
@@ -46,9 +52,13 @@ class Outbuffer : public cSimpleModule
     cOutVector qtime;
     cQueue *out_queue;
 
+    // to get info if channel/s behind "out" is busy
+    cChannel *outChannel;
+
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
+    virtual ~Outbuffer() override;
 };
 
 
@@ -119,7 +129,7 @@ void Inport::handleMessage(cMessage *msg)
         sendDelayed(release, txFinishTime-simTime(), "out", destination);
 
         // also send selfmsg to check if there are more pkgs waiting in in_queue
-        auto *selfmsg = new cMessage("CHECK-QUEUE");
+        auto *selfmsg = new cMessage("CHECK-IN-QUEUE");
         scheduleAt(simTime(), selfmsg);
 
         delete msg;
@@ -146,15 +156,22 @@ void Inport::handleMessage(cMessage *msg)
         Packet *ttpacket = check_and_cast<Packet *>(msg);
         in_queue->insert(ttpacket);
 
-        delete ttpacket;
+        //delete ttpacket;
     }
 }
 
-// TODO: destructor to deallocate queue
+
+Inport::~Inport()
+{
+    delete in_queue;
+}
 
 
 void Arbiter::initialize()
 {
+    request_queue = new cQueue("Request-queue");
+    blocked = false;
+
     outstanding_requests.setName("Outstanding-requests");
     service_time.setName("Service-time");
 }
@@ -162,8 +179,88 @@ void Arbiter::initialize()
 
 void Arbiter::handleMessage(cMessage *msg)
 {
-    // TODO
-    // check how old
+    // check request queue
+    if (msg->isSelfMessage())
+    {
+        if (!request_queue->isEmpty())
+        {
+            if (!blocked)
+            {
+                auto next_request = (cMessage*)request_queue->pop();
+                auto sourcePort = next_request->getSenderGate()->getIndex();
+
+                auto *grant = new cMessage("GRANT");
+                grant->setKind(200);
+                send(grant, "in_out", sourcePort);
+
+                // block arbiter
+                blocked = true;
+
+                delete msg;
+            }
+            // if blocked send selfmsg again
+            else
+            {
+                scheduleAt(simTime(), msg);
+            }
+        }
+        else
+        {
+            delete msg;
+        }
+    }
+    // request from inport
+    else if (msg->getKind() == 100)
+    {
+        if (!blocked)
+        {
+            auto sourcePort = msg->getSenderGate()->getIndex();
+
+            auto *grant = new cMessage("GRANT");
+            grant->setKind(200);
+            send(grant, "in_out", sourcePort);
+
+            // block arbiter
+            blocked = true;
+
+            delete msg;
+        }
+        // store request if currently blocked
+        else
+        {
+            request_queue->insert(msg);
+        }
+
+    }
+    // release from inport
+    else if (msg->getKind() == 300)
+    {
+        blocked = false;
+
+        // check request_queue
+        if (!request_queue->isEmpty())
+        {
+            auto next_request = (cMessage*)request_queue->pop();
+            auto sourcePort = next_request->getSenderGate()->getIndex();
+
+            auto *grant = new cMessage("GRANT");
+            grant->setKind(200);
+            send(grant, "in_out", sourcePort);
+
+            // block arbiter
+            blocked = true;
+
+            // send selfmsg to check if more requests are pending
+            auto *selfmsg = new cMessage("CHECK-REQUEST-QUEUE");
+            scheduleAt(simTime(), selfmsg);
+        }
+    }
+}
+
+
+Arbiter::~Arbiter()
+{
+    delete request_queue;
 }
 
 
@@ -177,11 +274,15 @@ void Multiplexer::handleMessage(cMessage *msg)
 {
     // TODO
     // map: input[i] -> out
+    send(msg, "out");
 }
 
 
 void Outbuffer::initialize()
 {
+    out_queue = new cQueue("Output-queue");
+    outChannel = gate("out")->getTransmissionChannel();
+
     qlength.setName("Qlength");
     qtime.setName("Qtime");
 }
@@ -192,4 +293,39 @@ void Outbuffer::handleMessage(cMessage *msg)
     // TODO
     // check if output to extern is busy via isBusy() / getTransmissionTime()
     // send slfmsg to repeatedly check queue
+
+    // check if outgate is busy
+
+
+    if (msg->isSelfMessage())
+    {
+        // check if queue is empty
+        if (!out_queue->isEmpty())
+        {
+
+        }
+    }
+    else
+    {
+        if (!outChannel->isBusy())
+        {
+            send(msg, "out");
+        }
+        else
+        {
+
+        }
+        if (out_queue->getLength() < (int)par("buffer_size") || (int)par("buffer_size") == 0)
+        {
+
+        }
+    }
+
+
+}
+
+
+Outbuffer::~Outbuffer()
+{
+    delete out_queue;
 }

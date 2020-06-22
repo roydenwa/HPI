@@ -54,6 +54,10 @@ simple Multiplexer
 
 simple Outbuffer
 {
+    parameters:
+        // 0 == inf
+        int buffer_size = default(0);
+    
     gates:
         input in;
         output out;
