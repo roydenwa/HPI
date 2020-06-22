@@ -96,13 +96,14 @@ void Inport::handleMessage(cMessage *msg)
         {
             auto *ttpacket = (Packet*)in_queue->get(0);
             auto destination = ttpacket->getDestination();
+            auto buffer_time = simTime() - ttpacket->getArrivalTime();
+
+            qtime.record(buffer_time);
 
             // create and send request
             auto *request = new cMessage("REQUEST");
             request->setKind(100);
-            send(request, "arbiterCtrl", destination);
-
-            // delete ttpacket needed?
+            send(request, "arbiterCtrl$o", destination);
 
             delete msg;
         }
@@ -116,7 +117,9 @@ void Inport::handleMessage(cMessage *msg)
     {
         auto *ttpacket = (Packet*)in_queue->pop();
         auto destination = ttpacket->getDestination();
+        auto buffer_time = simTime() - ttpacket->getArrivalTime();
 
+        qtime.record(buffer_time);
         send(ttpacket, "out", destination);
 
         // get transmission channel and transmission finish time
@@ -126,7 +129,7 @@ void Inport::handleMessage(cMessage *msg)
         // send release msg to arbiter after transmission finished
         auto *release = new cMessage("RELEASE");
         release->setKind(300);
-        sendDelayed(release, txFinishTime-simTime(), "arbiterCtrl", destination);
+        sendDelayed(release, txFinishTime-simTime(), "arbiterCtrl$o", destination);
 
         // also send selfmsg to check if there are more pkgs waiting in in_queue
         auto *selfmsg = new cMessage("CHECK-IN-QUEUE");
@@ -143,21 +146,19 @@ void Inport::handleMessage(cMessage *msg)
 
         auto *request = new cMessage("REQUEST");
         request->setKind(100);
-        send(request, "arbiterCtrl", destination);
+        send(request, "arbiterCtrl$o", destination);
 
         // insert packet into queue and delete local cast
         in_queue->insert(ttpacket);
-
-        //delete ttpacket;
     }
     // if in_queue is not empty and external msg: just store in in_queue
     else
     {
         Packet *ttpacket = check_and_cast<Packet *>(msg);
         in_queue->insert(ttpacket);
-
-        //delete ttpacket;
     }
+    // get size of queue == # of stored pkgs
+    qlength.recordWithTimestamp(simTime(), (double)in_queue->getLength());
 }
 
 
@@ -187,11 +188,14 @@ void Arbiter::handleMessage(cMessage *msg)
             if (!blocked)
             {
                 auto next_request = (cMessage*)request_queue->pop();
-                auto sourcePort = next_request->getSenderGate()->getIndex();
+                auto sourcePort = next_request->getArrivalGate()->getIndex();
+                auto buffer_time = simTime() - next_request->getArrivalTime();
+
+                service_time.record(buffer_time);
 
                 auto *grant = new cMessage("GRANT");
                 grant->setKind(200);
-                send(grant, "in_out", sourcePort);
+                send(grant, "in_out$o", sourcePort);
 
                 // block arbiter
                 blocked = true;
@@ -214,11 +218,13 @@ void Arbiter::handleMessage(cMessage *msg)
     {
         if (!blocked)
         {
-            auto sourcePort = msg->getSenderGate()->getIndex();
+            auto sourcePort = msg->getArrivalGate()->getIndex();
 
             auto *grant = new cMessage("GRANT");
             grant->setKind(200);
-            send(grant, "in_out", sourcePort);
+            send(grant, "in_out$o", sourcePort);
+
+            service_time.record(0.0);
 
             // block arbiter
             blocked = true;
@@ -229,8 +235,8 @@ void Arbiter::handleMessage(cMessage *msg)
         else
         {
             request_queue->insert(msg);
+            //delete msg;
         }
-
     }
     // release from inport
     else if (msg->getKind() == 300)
@@ -241,11 +247,14 @@ void Arbiter::handleMessage(cMessage *msg)
         if (!request_queue->isEmpty())
         {
             auto next_request = (cMessage*)request_queue->pop();
-            auto sourcePort = next_request->getSenderGate()->getIndex();
+            auto sourcePort = next_request->getArrivalGate()->getIndex();
+            auto buffer_time = simTime() - next_request->getArrivalTime();
+
+            service_time.record(buffer_time);
 
             auto *grant = new cMessage("GRANT");
             grant->setKind(200);
-            send(grant, "in_out", sourcePort);
+            send(grant, "in_out$o", sourcePort);
 
             // block arbiter
             blocked = true;
@@ -254,7 +263,9 @@ void Arbiter::handleMessage(cMessage *msg)
             auto *selfmsg = new cMessage("CHECK-REQUEST-QUEUE");
             scheduleAt(simTime(), selfmsg);
         }
+        delete msg;
     }
+    outstanding_requests.recordWithTimestamp(simTime(), (double)request_queue->getLength());
 }
 
 
@@ -305,6 +316,9 @@ void Outbuffer::handleMessage(cMessage *msg)
             if (!outChannel->isBusy())
             {
                 auto next_msg = (Packet*)out_queue->pop();
+                auto buffer_time = simTime() - next_msg->getArrivalTime();
+
+                qtime.record(buffer_time);
                 send(next_msg, "out");
 
                 // repeat if queue still not empty
@@ -350,6 +364,8 @@ void Outbuffer::handleMessage(cMessage *msg)
             }
         }
     }
+    // get size of queue == # of stored pkgs
+    qlength.recordWithTimestamp(simTime(), (double)out_queue->getLength());
 }
 
 
