@@ -12,6 +12,9 @@ class Inport : public cSimpleModule
     cOutVector qtime;
     cQueue *in_queue;
 
+    // to get info if channel/s behind "out" is busy
+    cChannel *txChannel;
+
   protected:
     virtual void initialize() override;
     virtual void handleMessage(cMessage *msg) override;
@@ -74,40 +77,73 @@ void Inport::initialize()
 
 void Inport::handleMessage(cMessage *msg)
 {
-    // if queue not empty -> store arriving msgs in queue
-    // send slfmsg to repeatedly check queue
+    // send slfmsg to repeatedly check queue --> needed for msgs which arrived
+    // during arbiterCtrl-cycle and thus are stored without request to arbiter
+    if (msg->isSelfMessage())
+    {
+        // check queue
+        if (!in_queue->isEmpty())
+        {
+            auto *ttpacket = (Packet*)in_queue->get(0);
+            auto destination = ttpacket->getDestination();
 
-    if (msg->getKind() == 200)
+            // create and send request
+            auto *request = new cMessage("REQUEST");
+            request->setKind(100);
+            send(request, "arbiterCtrl", destination);
+
+            // delete ttpacket needed?
+
+            delete msg;
+        }
+        else
+        {
+            delete msg;
+        }
+    }
+    // grant from arbiter
+    else if (msg->getKind() == 200)
     {
         auto *ttpacket = (Packet*)in_queue->pop();
         auto destination = ttpacket->getDestination();
 
         send(ttpacket, "out", destination);
 
-        // getTransmissionFinishTime
-        // TODO
+        // get transmission channel and transmission finish time
+        txChannel = gate("out", destination)->getTransmissionChannel();
+        auto txFinishTime = txChannel->getTransmissionFinishTime();
 
-        // schedule at release msg to arbiter
+        // send release msg to arbiter after transmission finished
         auto *release = new cMessage("RELEASE");
         release->setKind(300);
+        sendDelayed(release, txFinishTime-simTime(), "out", destination);
 
-        // send(release, "arbiterCtrl", destination);
+        // also send selfmsg to check if there are more pkgs waiting in in_queue
+        auto *selfmsg = new cMessage("CHECK-QUEUE");
+        scheduleAt(simTime(), selfmsg);
 
         delete msg;
     }
-    else
+    // if in_queue is empty and external msg: send request immediately
+    else if (in_queue->isEmpty())
     {
-        // external msg
-        auto *request = new cMessage("REQUEST");
-        request->setKind(100);
-
         // cast msg to custom class Packet
         Packet *ttpacket = check_and_cast<Packet *>(msg);
-
         auto destination = ttpacket->getDestination();
+
+        auto *request = new cMessage("REQUEST");
+        request->setKind(100);
         send(request, "arbiterCtrl", destination);
 
         // insert packet into queue and delete local cast
+        in_queue->insert(ttpacket);
+
+        //delete ttpacket;
+    }
+    // if in_queue is not empty and external msg: just store in in_queue
+    else
+    {
+        Packet *ttpacket = check_and_cast<Packet *>(msg);
         in_queue->insert(ttpacket);
 
         delete ttpacket;
