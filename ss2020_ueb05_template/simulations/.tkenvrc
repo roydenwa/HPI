@@ -1,0 +1,12 @@
+# Partial OMNeT++/Tkenv config file -- see $HOME/.tkenvrc as well
+config default-configname	{General}
+config default-runnumber	{0}
+inspector {NetXbarVOQ.xbar.voqs[3]} Voq 26 2 411x298+1498+587:normal
+inspector {Xbar4x4.xbar.outports[0]} Outport 51 2 411x306+968+206:normal
+inspector {NetXbarVOQ.xbar.voqs[1]} Voq 24 2 411x298+664+589:normal
+inspector {Xbar4x4.xbar.outports[4]} Outport 55 2 411x306+968+552:normal
+inspector NetXbarVOQ.xbar Xbarvoq 6 2 538x333+857+201:normal
+inspector {NetXbarVOQ.xbar.voqs[2]} Voq 25 2 411x299+1082+585:normal
+inspector {NetXbarVOQ.xbar.voqs[0]} Voq 23 2 411x299+251+593:normal
+inspector {Xbar4x4.xbar.outports[7]} Outport 58 2 411x306+965+898:normal
+
