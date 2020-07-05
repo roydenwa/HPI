@@ -5,3 +5,7 @@
 
 # pdfs to hand in:
 *.pdf
+
+# compiled files and results folder:
+**/results
+**/out
