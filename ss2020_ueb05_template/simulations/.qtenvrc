@@ -1,6 +1,6 @@
 [General]
-last-configname=Througput-Ports
-last-runnumber=4
+last-configname=Throughput-bandwidth
+last-runnumber=10
 
 [RunModeProfiles]
 fast-max-animation-speed=nan
