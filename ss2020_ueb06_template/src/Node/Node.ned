@@ -20,7 +20,7 @@ module Node
     parameters:
         volatile double SEND_DELAY @unit(s) = default(uniform(1.0us, 25.0us));
         volatile int PKT_SIZE @unit(byte) = default(intuniform(32byte, 1504byte));
-        double DL_CHECK_INTERVAL @unit(s)  = default(100us);
+        double DL_CHECK_INTERVAL @unit(s) = default(100us);
         int NODE_ID = default(0);
         string NODE_COUNT = default("1");
         int PORTS = default(2);
@@ -32,6 +32,7 @@ module Node
         int XOFF_THRES = default(1);
         bool TOPO_CUBE = default(false); // Either Mesh or Cube.
         bool ROUTE_TEST = default(false);
+        @display("bgb=417,450");
     gates:
         inout data[PORTS];
         inout flowCtrl[PORTS];
@@ -42,6 +43,7 @@ module Node
             XON_THRES = XON_THRES;
             XOFF_THRES = XOFF_THRES;
             DL_CHECK_INTERVAL = DL_CHECK_INTERVAL;
+            @display("p=156,304");
         }
 
         Xbar: Xbar {
@@ -50,12 +52,14 @@ module Node
             NODE_ID = NODE_ID;
             NODE_COUNT = NODE_COUNT;
             TOPO_CUBE = TOPO_CUBE;
+            @display("p=164,198");
         }
 
         AppLineDriver: AppLineDriver {
             FLIT_BYTES = FLIT_BYTES;
             HL_BUFFER_CAPACITY = HL_BUFFER_CAPACITY;
             DL_CHECK_INTERVAL = DL_CHECK_INTERVAL;
+            @display("p=164,114");
         }
 
         Application: Application {
@@ -65,6 +69,7 @@ module Node
             NODE_ID = NODE_ID;
             NODE_COUNT = NODE_COUNT;
             ROUTE_TEST = ROUTE_TEST;
+            @display("p=170,29");
         }
 
     connections:

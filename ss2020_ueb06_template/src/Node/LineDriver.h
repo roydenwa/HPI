@@ -47,6 +47,9 @@ class LineDriver : public cSimpleModule
      void serviceExtTx();
      void serviceIntTx(int vId);
      void handleVcf(VirtualChannelFrame *vcf);
+
+     // statistics
+     cOutVector buffer_load;
 };
 
 #endif

@@ -45,6 +45,8 @@ void LineDriver::initialize() {
     WATCH_VECTOR(intTransmissionLastFlitSent);
     WATCH_VECTOR(bufferFirstMessageId);
 
+    buffer_load.setName("Buffer-load");
+
     for (int i = 0; i < vcs; ++i) {
         queues->add(new cQueue());
         extSendAllowed.push_back(true);
@@ -302,6 +304,18 @@ void LineDriver::handleMessage(cMessage *msg) {
             scheduleAt(simTime() + SimTime((double)par("DL_CHECK_INTERVAL")), msg);
         }
     } else {
+        // statistics for buffers:
+        // "Bei Bedarf kann diese Statistik als Summe aller virtuellen Kanäle erfasst werden"
+        int buffer_sum;
+
+        for (int i = 0; i < (int)par("VIRTUAL_CHANNELS"); i++)
+        {
+            auto queue = (cQueue*)queues->get(i);
+            buffer_sum += queue->getLength();
+        }
+
+        buffer_load.recordWithTimestamp(simTime(), (double)buffer_sum);
+
         handleVcf((VirtualChannelFrame*) msg); // Gets ownership of msg... deletes it by itself.
     }
 }
