@@ -1,0 +1,4 @@
+#!/bin/sh
+cd `dirname $0`
+../src/ss2020_ueb06 -n .:../src $*
+# for shared lib, use: opp_run -l ../src/ss2020_ueb06 -n .:../src $*
