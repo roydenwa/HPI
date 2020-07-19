@@ -39,6 +39,7 @@ network Mesh2D
 	    node[num_nodes]: Node{
             NODE_ID = index;
 	    	PORTS = 4;
+	    	NODE_COUNT = "4 4";
 	    	@display("p=69,56,m,4");
 	    }
 	    
