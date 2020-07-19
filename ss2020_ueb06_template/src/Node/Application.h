@@ -32,6 +32,11 @@ class Application : public cSimpleModule
     void probeAllNodes();
     void checkRouteability();
     int NODE_CNT;
+
+    // statistics
+    cHistogram hop_count;
+    cHistogram packet_sizes;
+    cHistogram end2end_delay;
 };
 
 #endif

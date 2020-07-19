@@ -22,6 +22,10 @@ Define_Module(Application);
 
 void Application::initialize() {
     NODE_CNT = TopologyHelper::getNodeCountSingle((const char *)par("NODE_COUNT"));
+    hop_count.setName("Hop-count");
+    packet_sizes.setName("Packet-sizes");
+    end2end_delay.setName("End2end-delay");
+
     if (par("ROUTE_TEST")) {
         probeAllNodes();
     } else {
@@ -44,6 +48,10 @@ void Application::checkRouteability() {
 }
 
 void Application::finish() {
+    hop_count.recordAs("Hop-count");
+    packet_sizes.recordAs("Packet-sizes");
+    end2end_delay.recordAs("End2end-delay");
+
     if (par("ROUTE_TEST")) {
         checkRouteability();
     }
@@ -80,10 +88,21 @@ void Application::handleMessage(cMessage *msg) {
     if (msg->isSelfMessage()) {
         simtime_t nextSendTime = simTime() + (double)par("SEND_DELAY");
         HLPacket *hlp = generatePacket();
+
+        auto size = hlp->getByteLength();
+        packet_sizes.collect(size);
+
         send(hlp, "data$o");
         scheduleAt(nextSendTime, msg);
     } else { // Message arrived on data-line
        HLPacket *hlp = (HLPacket *) msg;
+
+       auto hops = hlp->getHopCnt();
+       hop_count.collect(hops);
+
+       auto end2end = simTime() - hlp->getCreationTime();
+       end2end_delay.collect(end2end);
+
        if (hlp->getDestination() != (int) par("NODE_ID")) {
            INFO(("Packet misrouted. Should be delivered to %d, but got sent to %d\n",
                    hlp->getDescriptor(), (int) par("NODE_ID")));

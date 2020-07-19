@@ -1,12 +1,12 @@
 #
-# OMNeT++/OMNEST Makefile for ss2020_ueb06
+# OMNeT++/OMNEST Makefile for ss2020_ueb06_template
 #
 # This file was generated with the command:
 #  opp_makemake -f --deep
 #
 
 # Name of target to be created (-o option)
-TARGET = ss2020_ueb06$(D)$(EXE_SUFFIX)
+TARGET = ss2020_ueb06_template$(D)$(EXE_SUFFIX)
 TARGET_DIR = .
 
 # User interface (uncomment one) (-u option)
