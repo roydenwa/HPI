@@ -26,7 +26,7 @@ network Mesh2D
 	    int num_nodes = rows * columns;
 
 	   	double bandwidth @unit(bps) = default(1500Mbps);
-        double delay @unit(ns) = default(0);
+        double delay @unit(ns) = default(100ns);
 	    
 	types:
 	    channel C extends ned.DatarateChannel

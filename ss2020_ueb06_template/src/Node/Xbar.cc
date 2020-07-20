@@ -70,23 +70,27 @@ LogicalPort* Xbar::calculateRoutingDORMesh(int dAddr) {
     int x_offset = destNodeCoord[0] - MY_NODE_COORD[0];
     int y_offset = destNodeCoord[1] - MY_NODE_COORD[1];
 
-    if (x_offset == 0 && y_offset == 0) {
-        return nullptr;
-    } else if (x_offset != 0) {
-        if (x_offset < 0) {
-            lp = new LogicalPort(0, 0);
-        }
-        if (x_offset > 0) {
-            lp = new LogicalPort(1, 0);
-        }
-    } else if (y_offset != 0) {
-        if (y_offset < 0) {
-            lp = new LogicalPort(2, 0);
-        }
-        if (y_offset > 0) {
-            lp = new LogicalPort(3, 0);
-        }
+    if (x_offset > 0)
+    {
+        lp = new LogicalPort(1, 0);
     }
+    else if (x_offset < 0)
+    {
+        lp = new LogicalPort(0, 0);
+    }
+    else if (y_offset > 0)
+    {
+        lp = new LogicalPort(3, 0);
+    }
+    else if (y_offset < 0)
+    {
+        lp = new LogicalPort(2, 0);
+    }
+    else
+    {
+        return nullptr;
+    }
+
     return lp;
 }
 

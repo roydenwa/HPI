@@ -50,7 +50,7 @@ void Application::checkRouteability() {
 void Application::finish() {
     hop_count.recordAs("Hop-count");
     packet_sizes.recordAs("Packet-sizes");
-    end2end_delay.recordAs("End2end-delay");
+    end2end_delay.recordAs("End2end-delay", "ns");
 
     if (par("ROUTE_TEST")) {
         checkRouteability();
